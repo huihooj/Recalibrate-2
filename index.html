@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recalibrate — Wellness Resort in Nature</title>
+  <meta name="description" content="A next-generation wellness resort set in nature. Recover, disconnect, and create lasting memories with restorative technologies and screen-free social experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Fraunces', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ink: '#0B1620',
+            mist: '#E9EEF2',
+            sage: '#B7C4A8',
+            sand: '#E8DFCF',
+            terra: '#C66B3D',
+            deep: '#0F2D3D',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-mist text-ink font-sans antialiased overflow-x-hidden">
+
+  <!-- NAV -->
+  <header id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
+      <a href="#" class="font-display text-2xl tracking-tight text-white nav-text">Recalibrate<span class="text-terra">.</span></a>
+      <nav class="hidden md:flex items-center gap-9 text-sm font-medium text-white/90 nav-text">
+        <a href="#experience" class="hover:text-white transition">Experience</a>
+        <a href="#technology" class="hover:text-white transition">Technology</a>
+        <a href="#social" class="hover:text-white transition">Social</a>
+        <a href="#stays" class="hover:text-white transition">Stays</a>
+      </nav>
+      <a href="#book" class="group inline-flex items-center gap-2 bg-white text-ink text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-terra hover:text-white transition-all">
+        Book a stay
+        <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative h-screen min-h-[700px] w-full overflow-hidden">
+    <div class="absolute inset-0 hero-bg" id="heroBg"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-ink/30 via-ink/10 to-ink/70"></div>
+
+    <div class="relative h-full max-w-[1400px] mx-auto px-6 md:px-10 flex flex-col justify-end pb-24 md:pb-32">
+      <div class="max-w-4xl">
+        <p class="text-white/80 text-sm md:text-base uppercase tracking-[0.3em] mb-6 reveal">A wellness resort in nature</p>
+        <h1 class="font-display text-white text-[44px] leading-[1.05] md:text-[88px] md:leading-[0.95] font-light tracking-tight reveal">
+          Step out of the screen.<br />
+          <span class="italic font-normal">Step into yourself.</span>
+        </h1>
+        <p class="text-white/85 text-lg md:text-xl max-w-2xl mt-8 leading-relaxed reveal">
+          Recalibrate is a next-generation wellness retreat where restorative technology meets the wild quiet of the mountains — designed to help you recover, disconnect, and remember what it feels like to be present.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mt-10 reveal">
+          <a href="#book" class="inline-flex items-center justify-center gap-2 bg-terra text-white px-7 py-4 rounded-full font-semibold hover:bg-white hover:text-ink transition-all">
+            Reserve your reset
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a href="#experience" class="inline-flex items-center justify-center gap-2 border border-white/40 text-white px-7 py-4 rounded-full font-semibold hover:bg-white/10 transition-all">
+            Explore the experience
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 text-xs uppercase tracking-[0.3em] flex flex-col items-center gap-3 animate-bounce-slow">
+      <span>Scroll</span>
+      <div class="w-px h-12 bg-white/40"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="bg-ink text-white py-6 overflow-hidden border-y border-white/10">
+    <div class="marquee flex gap-16 whitespace-nowrap text-2xl md:text-4xl font-display italic font-light">
+      <span>· Recover ·</span><span>· Disconnect ·</span><span>· Remember ·</span><span>· Recalibrate ·</span>
+      <span>· Recover ·</span><span>· Disconnect ·</span><span>· Remember ·</span><span>· Recalibrate ·</span>
+      <span>· Recover ·</span><span>· Disconnect ·</span><span>· Remember ·</span><span>· Recalibrate ·</span>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section id="experience" class="relative py-24 md:py-40 bg-mist">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-10 grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-4">
+        <p class="text-xs uppercase tracking-[0.3em] text-ink/60 reveal">01 — The idea</p>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display text-4xl md:text-6xl leading-[1.1] font-light text-ink reveal">
+          We didn't build a hotel. We built a place where your nervous system can finally exhale.
+        </h2>
+        <div class="grid md:grid-cols-2 gap-10 mt-14">
+          <p class="text-ink/75 text-lg leading-relaxed reveal">
+            Modern life leaves you wired and depleted at the same time. Recalibrate is a sanctuary engineered to reverse that — combining the science of recovery with the slow rhythm of the wilderness.
+          </p>
+          <p class="text-ink/75 text-lg leading-relaxed reveal">
+            Your phone goes in a wooden box at check-in. What replaces it: a curated rhythm of movement, contrast, stillness, and human connection that lasts longer than any notification ever did.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGY GRID -->
+  <section id="technology" class="bg-ink text-white py-24 md:py-32">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <p class="text-xs uppercase tracking-[0.3em] text-white/50 mb-4 reveal">02 — Restorative technology</p>
+          <h2 class="font-display text-4xl md:text-6xl font-light leading-[1.05] max-w-3xl reveal">
+            Science you can feel<br /><span class="italic text-sage">in your body.</span>
+          </h2>
+        </div>
+        <p class="max-w-md text-white/70 leading-relaxed reveal">
+          Every protocol is built around evidence-based recovery, then personalized by an AI that learns your physiology over the course of your stay.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        <article class="tech-card group reveal">
+          <div class="tech-card-img" style="background-image: url('https://images.unsplash.com/photo-1583416750470-965b2707b355?auto=format&fit=crop&w=1200&q=80')"></div>
+          <div class="tech-card-body">
+            <span class="text-terra text-xs uppercase tracking-[0.25em]">Thermal</span>
+            <h3 class="font-display text-3xl mt-3 mb-3 font-light">Contrast therapy</h3>
+            <p class="text-white/70 leading-relaxed">Cedar sauna at 90°C. Glacial plunge at 4°C. Repeat. A 3000-year-old practice, refined into the most effective reset for inflammation and mood you'll find.</p>
+          </div>
+        </article>
+
+        <article class="tech-card group reveal">
+          <div class="tech-card-img" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80')"></div>
+          <div class="tech-card-body">
+            <span class="text-terra text-xs uppercase tracking-[0.25em]">Adaptive</span>
+            <h3 class="font-display text-3xl mt-3 mb-3 font-light">AI-personalized recovery</h3>
+            <p class="text-white/70 leading-relaxed">Wearables read your HRV, sleep, and stress load. Your day adapts in real time — more breathwork on hard mornings, more movement on the easy ones.</p>
+          </div>
+        </article>
+
+        <article class="tech-card group reveal">
+          <div class="tech-card-img" style="background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80')"></div>
+          <div class="tech-card-body">
+            <span class="text-terra text-xs uppercase tracking-[0.25em]">Aquatic</span>
+            <h3 class="font-display text-3xl mt-3 mb-3 font-light">Hydrotherapy circuits</h3>
+            <p class="text-white/70 leading-relaxed">Mineral pools, sensory float tanks, Kneipp walks. Water as medicine — guided by therapists who measure outcomes, not just minutes.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPLIT FEATURE -->
+  <section class="relative bg-sand">
+    <div class="grid md:grid-cols-2 min-h-[600px]">
+      <div class="relative overflow-hidden h-[400px] md:h-auto">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80" alt="" class="absolute inset-0 w-full h-full object-cover parallax-img" />
+      </div>
+      <div class="p-10 md:p-20 flex flex-col justify-center">
+        <p class="text-xs uppercase tracking-[0.3em] text-ink/60 mb-6 reveal">A phone-free promise</p>
+        <h2 class="font-display text-4xl md:text-5xl leading-[1.1] font-light reveal">
+          The most luxurious thing<br />we offer is <span class="italic">your attention back.</span>
+        </h2>
+        <p class="text-ink/75 text-lg mt-8 leading-relaxed reveal">
+          On arrival, your phone goes into a hand-turned timber lockbox. In its place: a leather field journal, a film camera, and a printed map of the property. Studies show it takes 72 hours for the nervous system to fully release the grip of the algorithm. Most guests stay five days.
+        </p>
+        <div class="grid grid-cols-3 gap-6 mt-12 reveal">
+          <div>
+            <div class="font-display text-4xl font-light text-terra">72h</div>
+            <p class="text-sm text-ink/60 mt-2">to fully unplug</p>
+          </div>
+          <div>
+            <div class="font-display text-4xl font-light text-terra">0</div>
+            <p class="text-sm text-ink/60 mt-2">screens in suites</p>
+          </div>
+          <div>
+            <div class="font-display text-4xl font-light text-terra">5★</div>
+            <p class="text-sm text-ink/60 mt-2">guest return rate</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL ENTERTAINMENT -->
+  <section id="social" class="bg-mist py-24 md:py-32">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+      <div class="max-w-3xl mb-16">
+        <p class="text-xs uppercase tracking-[0.3em] text-ink/60 mb-4 reveal">03 — Social by design</p>
+        <h2 class="font-display text-4xl md:text-6xl leading-[1.05] font-light reveal">
+          Wellness shouldn't<br /><span class="italic">feel like solitary confinement.</span>
+        </h2>
+        <p class="text-ink/70 text-lg mt-6 leading-relaxed reveal">
+          We borrowed the best parts of summer camp, film festivals, and dinner parties — and rebuilt them around presence. You'll leave with new friends, not just a lower cortisol score.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-5">
+        <article class="md:col-span-7 social-card reveal" style="background-image: linear-gradient(rgba(11,22,32,0.2), rgba(11,22,32,0.8)), url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80')">
+          <div class="social-card-content">
+            <span class="text-sand text-xs uppercase tracking-[0.25em]">Weekly</span>
+            <h3 class="font-display text-3xl md:text-5xl text-white font-light mt-3">Open-air<br />cinema nights</h3>
+            <p class="text-white/80 mt-4 max-w-md">Curated indie films projected onto a 30-foot screen under the stars. Wool blankets, hot toddies, and a quiet rule: no talking during the credits.</p>
+          </div>
+        </article>
+
+        <article class="md:col-span-5 social-card reveal" style="background-image: linear-gradient(rgba(11,22,32,0.2), rgba(11,22,32,0.8)), url('https://images.unsplash.com/photo-1551727974-8af20a3322f1?auto=format&fit=crop&w=1200&q=80')">
+          <div class="social-card-content">
+            <span class="text-sand text-xs uppercase tracking-[0.25em]">Daily</span>
+            <h3 class="font-display text-3xl md:text-4xl text-white font-light mt-3">Photobooth<br />hunts</h3>
+            <p class="text-white/80 mt-4">Twelve hidden polaroid stations across the valley. Find them all, take them home.</p>
+          </div>
+        </article>
+
+        <article class="md:col-span-5 social-card reveal" style="background-image: linear-gradient(rgba(11,22,32,0.2), rgba(11,22,32,0.8)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80')">
+          <div class="social-card-content">
+            <span class="text-sand text-xs uppercase tracking-[0.25em]">Workshops</span>
+            <h3 class="font-display text-3xl md:text-4xl text-white font-light mt-3">Make<br />something</h3>
+            <p class="text-white/80 mt-4">Sourdough, ceramics, woodworking, sound bowls. Hands busy, mind quiet.</p>
+          </div>
+        </article>
+
+        <article class="md:col-span-7 social-card reveal" style="background-image: linear-gradient(rgba(11,22,32,0.2), rgba(11,22,32,0.8)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80')">
+          <div class="social-card-content">
+            <span class="text-sand text-xs uppercase tracking-[0.25em]">Nightly</span>
+            <h3 class="font-display text-3xl md:text-5xl text-white font-light mt-3">Long-table<br />suppers</h3>
+            <p class="text-white/80 mt-4 max-w-md">Twelve strangers, one chef, four courses sourced from within fifty kilometers. Conversation cards on the table, candles burning low.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="bg-deep text-white py-24 md:py-40">
+    <div class="max-w-4xl mx-auto px-6 md:px-10 text-center">
+      <svg class="mx-auto w-12 h-12 text-terra mb-10 reveal" fill="currentColor" viewBox="0 0 24 24"><path d="M9.13 8.99l-4.86 8.4c-.39.68.1 1.61.89 1.61H9.1c.39 0 .73-.22.89-.59l3.15-7.04c.07-.16.1-.34.1-.51V5.99c0-.55-.45-1-1-1H10.13c-.39 0-.74.23-.9.59l-.1.21c-.07.17-.07.34 0 .51l-.01.69zM21 5.99c0-.55-.45-1-1-1h-2.13c-.39 0-.74.23-.9.59l-4.86 8.4c-.39.68.1 1.61.89 1.61h3.93c.39 0 .73-.22.89-.59l3.15-7.04c.07-.16.1-.34.1-.51V5.99z"/></svg>
+      <p class="font-display text-3xl md:text-5xl leading-[1.2] font-light italic reveal">
+        I came in clenched. I left with a softer face, a slower pulse, and seven new friends I'll fly back for. I didn't know I needed this until I had it.
+      </p>
+      <div class="mt-12 reveal">
+        <p class="font-semibold">Maya L.</p>
+        <p class="text-white/60 text-sm">Returned three times in 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAYS / BOOK -->
+  <section id="stays" class="bg-mist py-24 md:py-32">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <p class="text-xs uppercase tracking-[0.3em] text-ink/60 mb-4 reveal">04 — Stay with us</p>
+          <h2 class="font-display text-4xl md:text-6xl font-light leading-[1.05] reveal">Choose your rhythm.</h2>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="stay-card reveal">
+          <p class="text-xs uppercase tracking-[0.25em] text-ink/50">Weekend</p>
+          <h3 class="font-display text-4xl mt-3 font-light">The Reset</h3>
+          <p class="text-ink/70 mt-3">3 nights · arrival to arrival</p>
+          <ul class="mt-6 space-y-2 text-ink/80 text-sm">
+            <li>· Contrast therapy daily</li>
+            <li>· One AI recovery scan</li>
+            <li>· Cinema + supper included</li>
+          </ul>
+          <div class="mt-8 flex items-end justify-between">
+            <div>
+              <div class="font-display text-3xl">$1,290</div>
+              <p class="text-xs text-ink/50">per guest</p>
+            </div>
+            <a href="#book" class="text-sm font-semibold underline underline-offset-4 hover:text-terra">Book →</a>
+          </div>
+        </div>
+
+        <div class="stay-card stay-card-featured reveal">
+          <span class="absolute top-6 right-6 text-xs uppercase tracking-[0.25em] bg-terra text-white px-3 py-1 rounded-full">Most chosen</span>
+          <p class="text-xs uppercase tracking-[0.25em] text-white/60">Full week</p>
+          <h3 class="font-display text-4xl mt-3 font-light text-white">The Recalibration</h3>
+          <p class="text-white/70 mt-3">5 nights · the full protocol</p>
+          <ul class="mt-6 space-y-2 text-white/85 text-sm">
+            <li>· Personalized AI plan</li>
+            <li>· All hydrotherapy circuits</li>
+            <li>· Workshops + photobooth hunt</li>
+            <li>· Take-home recovery profile</li>
+          </ul>
+          <div class="mt-8 flex items-end justify-between">
+            <div>
+              <div class="font-display text-3xl text-white">$2,490</div>
+              <p class="text-xs text-white/60">per guest</p>
+            </div>
+            <a href="#book" class="text-sm font-semibold text-white underline underline-offset-4 hover:text-sand">Book →</a>
+          </div>
+        </div>
+
+        <div class="stay-card reveal">
+          <p class="text-xs uppercase tracking-[0.25em] text-ink/50">Deep</p>
+          <h3 class="font-display text-4xl mt-3 font-light">The Sabbatical</h3>
+          <p class="text-ink/70 mt-3">10 nights · transformation length</p>
+          <ul class="mt-6 space-y-2 text-ink/80 text-sm">
+            <li>· Everything in The Recalibration</li>
+            <li>· 1-on-1 with on-site physician</li>
+            <li>· Private fire-circle dinner</li>
+          </ul>
+          <div class="mt-8 flex items-end justify-between">
+            <div>
+              <div class="font-display text-3xl">$4,890</div>
+              <p class="text-xs text-ink/50">per guest</p>
+            </div>
+            <a href="#book" class="text-sm font-semibold underline underline-offset-4 hover:text-terra">Book →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="book" class="relative py-32 md:py-48 overflow-hidden">
+    <div class="absolute inset-0 hero-bg opacity-90"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-ink/60 to-ink/80"></div>
+    <div class="relative max-w-4xl mx-auto px-6 md:px-10 text-center text-white">
+      <h2 class="font-display text-5xl md:text-7xl font-light leading-[1.05] reveal">
+        The mountains have<br />been waiting.
+      </h2>
+      <p class="text-white/80 text-lg md:text-xl mt-8 max-w-2xl mx-auto reveal">
+        Spaces are limited to twenty-eight guests per cycle. Apply for a stay and we'll match you to your rhythm.
+      </p>
+      <form class="mt-12 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto reveal" onsubmit="event.preventDefault(); this.querySelector('button').innerText='Thank you — we\'ll be in touch'; this.querySelector('button').disabled=true;">
+        <input type="email" required placeholder="your@email.com" class="flex-1 px-6 py-4 rounded-full bg-white/10 backdrop-blur border border-white/30 text-white placeholder-white/50 focus:outline-none focus:border-white" />
+        <button type="submit" class="px-7 py-4 rounded-full bg-terra text-white font-semibold hover:bg-white hover:text-ink transition-all">
+          Request a stay
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-white/70 py-16">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-10 grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <div class="font-display text-3xl text-white">Recalibrate<span class="text-terra">.</span></div>
+        <p class="mt-4 max-w-sm">A next-generation wellness resort, set in nature. Recover. Disconnect. Remember.</p>
+      </div>
+      <div>
+        <p class="text-white text-sm uppercase tracking-[0.2em] mb-4">Visit</p>
+        <p class="leading-relaxed">Blue Mountains, NSW<br />Australia</p>
+      </div>
+      <div>
+        <p class="text-white text-sm uppercase tracking-[0.2em] mb-4">Reach us</p>
+        <p class="leading-relaxed">hello@recalibrate.co<br />+61 2 0000 0000</p>
+      </div>
+    </div>
+    <div class="max-w-[1400px] mx-auto px-6 md:px-10 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-xs text-white/40">
+      <p>© 2026 Recalibrate. All rights reserved.</p>
+      <p>Designed for being present.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* === Base === */
+html { scroll-behavior: smooth; }
+body { font-feature-settings: 'ss01', 'ss02'; }
+
+/* === Hero background (Blue Mountains) === */
+.hero-bg {
+  background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2400&q=85');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.05);
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+/* === Nav scroll state === */
+#nav.scrolled {
+  background: rgba(11, 22, 32, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+#nav.scrolled .nav-text { opacity: 1; }
+
+/* === Reveal-on-scroll === */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal:nth-child(2) { transition-delay: 0.08s; }
+.reveal:nth-child(3) { transition-delay: 0.16s; }
+.reveal:nth-child(4) { transition-delay: 0.24s; }
+
+/* === Marquee === */
+.marquee {
+  animation: marquee 38s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* === Tech cards === */
+.tech-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #14222E;
+  border: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), border-color 0.4s;
+}
+.tech-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(198, 107, 61, 0.4);
+}
+.tech-card-img {
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.9s cubic-bezier(0.16,1,0.3,1);
+}
+.tech-card:hover .tech-card-img {
+  transform: scale(1.06);
+}
+.tech-card-body {
+  padding: 28px 28px 32px;
+}
+
+/* === Social cards === */
+.social-card {
+  position: relative;
+  min-height: 380px;
+  border-radius: 24px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+.social-card:hover {
+  transform: scale(1.012);
+}
+.social-card-content {
+  padding: 36px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .social-card { min-height: 460px; }
+}
+
+/* === Stay cards === */
+.stay-card {
+  position: relative;
+  background: white;
+  border-radius: 22px;
+  padding: 36px 32px 32px;
+  border: 1px solid rgba(11,22,32,0.06);
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s;
+}
+.stay-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px -20px rgba(11,22,32,0.25);
+}
+.stay-card-featured {
+  background: #0B1620;
+  border-color: transparent;
+}
+.stay-card-featured:hover {
+  box-shadow: 0 24px 60px -20px rgba(198,107,61,0.5);
+}
+
+/* === Parallax === */
+.parallax-img {
+  will-change: transform;
+}
+
+/* === Animations === */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 2.6s ease-in-out infinite;
+}
+
+/* === Selection === */
+::selection { background: #C66B3D; color: white; }
