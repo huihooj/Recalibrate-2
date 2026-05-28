@@ -2,6 +2,10 @@
 html { scroll-behavior: smooth; }
 body { font-feature-settings: 'ss01', 'ss02'; }
 
+/* === Brand display font tuning (Cormorant Garamond is lighter than Fraunces) === */
+.font-display { font-weight: 500; letter-spacing: -0.005em; }
+.font-display.italic { font-weight: 400; }
+
 /* === Hero background (Blue Mountains) === */
 .hero-bg {
   background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2400&q=85');

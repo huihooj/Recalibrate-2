@@ -5,25 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Recalibrate — Wellness Resort in Nature</title>
   <meta name="description" content="A next-generation wellness resort set in nature. Recover, disconnect, and create lasting memories with restorative technologies and screen-free social experiences." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 8 A42 42 0 1 1 49.99 8' stroke='%231F3D2E' stroke-width='4' fill='none' stroke-linecap='round' stroke-dasharray='240 12 3 4 3 4 3 4'/%3E%3Cg stroke='%23B8825A' stroke-width='3' stroke-linecap='round'%3E%3Cline x1='50' y1='30' x2='50' y2='55'/%3E%3Cline x1='40' y1='33' x2='46' y2='54'/%3E%3Cline x1='60' y1='33' x2='54' y2='54'/%3E%3Cline x1='32' y1='40' x2='43' y2='55'/%3E%3Cline x1='68' y1='40' x2='57' y2='55'/%3E%3C/g%3E%3Cpath d='M22 62 Q 50 80 78 62 Q 50 70 22 62 Z' fill='none' stroke='%231F3D2E' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            display: ['Fraunces', 'serif'],
+            display: ['"Cormorant Garamond"', 'serif'],
             sans: ['Inter', 'system-ui', 'sans-serif'],
           },
           colors: {
-            ink: '#0B1620',
-            mist: '#E9EEF2',
+            ink: '#1A2E24',
+            forest: '#1F3D2E',
+            mist: '#F5F1EA',
             sage: '#B7C4A8',
             sand: '#E8DFCF',
-            terra: '#C66B3D',
-            deep: '#0F2D3D',
+            terra: '#B8825A',
+            copper: '#B8825A',
+            deep: '#142A20',
           },
         },
       },
@@ -36,7 +39,22 @@
   <!-- NAV -->
   <header id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
     <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
-      <a href="#" class="font-display text-2xl tracking-tight text-white nav-text">Recalibrate<span class="text-terra">.</span></a>
+      <a href="#" class="flex items-center gap-2.5 nav-text text-white">
+        <svg class="brand-mark w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 8 A42 42 0 1 1 49.99 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="240 12 3 4 3 4 3 4"/>
+          <g stroke="#B8825A" stroke-width="1.8" stroke-linecap="round">
+            <line x1="50" y1="30" x2="50" y2="55"/>
+            <line x1="40" y1="33" x2="46" y2="54"/>
+            <line x1="60" y1="33" x2="54" y2="54"/>
+            <line x1="32" y1="40" x2="43" y2="55"/>
+            <line x1="68" y1="40" x2="57" y2="55"/>
+            <line x1="26" y1="49" x2="41" y2="57"/>
+            <line x1="74" y1="49" x2="59" y2="57"/>
+          </g>
+          <path d="M22 62 Q 50 80 78 62 Q 50 70 22 62 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        <span class="font-display text-2xl tracking-wide leading-none">Recalibrate</span>
+      </a>
       <nav class="hidden md:flex items-center gap-9 text-sm font-medium text-white/90 nav-text">
         <a href="#experience" class="hover:text-white transition">Experience</a>
         <a href="#technology" class="hover:text-white transition">Technology</a>
@@ -350,8 +368,24 @@
   <footer class="bg-ink text-white/70 py-16">
     <div class="max-w-[1400px] mx-auto px-6 md:px-10 grid md:grid-cols-4 gap-10">
       <div class="md:col-span-2">
-        <div class="font-display text-3xl text-white">Recalibrate<span class="text-terra">.</span></div>
-        <p class="mt-4 max-w-sm">A next-generation wellness resort, set in nature. Recover. Disconnect. Remember.</p>
+        <div class="flex items-center gap-3 text-white">
+          <svg class="w-10 h-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M50 8 A42 42 0 1 1 49.99 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="240 12 3 4 3 4 3 4"/>
+            <g stroke="#B8825A" stroke-width="1.8" stroke-linecap="round">
+              <line x1="50" y1="30" x2="50" y2="55"/>
+              <line x1="40" y1="33" x2="46" y2="54"/>
+              <line x1="60" y1="33" x2="54" y2="54"/>
+              <line x1="32" y1="40" x2="43" y2="55"/>
+              <line x1="68" y1="40" x2="57" y2="55"/>
+              <line x1="26" y1="49" x2="41" y2="57"/>
+              <line x1="74" y1="49" x2="59" y2="57"/>
+            </g>
+            <path d="M22 62 Q 50 80 78 62 Q 50 70 22 62 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+          <div class="font-display text-3xl tracking-wide leading-none">Recalibrate</div>
+        </div>
+        <p class="text-xs uppercase tracking-[0.35em] text-white/50 mt-3">Wellness Retreat</p>
+        <p class="mt-5 max-w-sm">A next-generation wellness resort, set in nature. Recover. Disconnect. Remember.</p>
       </div>
       <div>
         <p class="text-white text-sm uppercase tracking-[0.2em] mb-4">Visit</p>
