@@ -18,6 +18,39 @@ body { font-feature-settings: 'ss01', 'ss02'; }
 }
 
 /* === Nav scroll state === */
+.event-banner {
+  background: rgba(11, 22, 32, 0.92);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+.event-banner strong {
+  color: #E8DFCF;
+  font-weight: 700;
+}
+.event-banner a {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.event-banner-divider {
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: #B8825A;
+}
+@media (max-width: 640px) {
+  .event-banner {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+  }
+  .event-banner a {
+    display: none;
+  }
+}
 #nav.scrolled {
   background: rgba(11, 22, 32, 0.85);
   backdrop-filter: blur(14px);
@@ -100,8 +133,8 @@ body { font-feature-settings: 'ss01', 'ss02'; }
   .social-card { min-height: 460px; }
 }
 
-/* === Summer Bloom campaign === */
-.summer-bloom {
+/* === Summer Event campaign === */
+.summer-event {
   border-top: 1px solid rgba(11,22,32,0.08);
   border-bottom: 1px solid rgba(11,22,32,0.08);
 }
@@ -144,10 +177,10 @@ body { font-feature-settings: 'ss01', 'ss02'; }
 }
 .campaign-art {
   margin: 0;
+  position: relative;
 }
 .campaign-art a {
   display: block;
-  background: #0B1620;
   box-shadow: 0 30px 80px -38px rgba(11,22,32,0.55);
   transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), box-shadow 0.5s cubic-bezier(0.16,1,0.3,1);
 }
@@ -159,6 +192,39 @@ body { font-feature-settings: 'ss01', 'ss02'; }
   display: block;
   width: 100%;
   height: auto;
+}
+.campaign-art-fallback {
+  display: none;
+}
+.campaign-art.is-missing a {
+  display: none;
+}
+.campaign-art.is-missing .campaign-art-fallback {
+  align-items: center;
+  aspect-ratio: 16 / 9;
+  background: #0B1620;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 320px;
+  padding: 40px;
+  text-align: center;
+}
+.campaign-art-fallback span {
+  color: #B8825A;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+.campaign-art-fallback strong {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-weight: 500;
+  line-height: 0.95;
+  margin-top: 18px;
 }
 @media (min-width: 1024px) {
   .campaign-layout {

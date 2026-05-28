@@ -38,6 +38,14 @@
 
   <!-- NAV -->
   <header id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="event-banner">
+      <div class="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-center gap-3">
+        <span class="event-banner-kicker">Summer Event now open</span>
+        <span class="event-banner-divider"></span>
+        <strong>Limited spots available</strong>
+        <a href="#summer-event">Reserve now</a>
+      </div>
+    </div>
     <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
       <a href="#" class="flex items-center gap-2.5 nav-text text-white">
         <svg class="brand-mark w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -59,7 +67,7 @@
         <a href="#experience" class="hover:text-white transition">Experience</a>
         <a href="#technology" class="hover:text-white transition">Technology</a>
         <a href="#social" class="hover:text-white transition">Social</a>
-        <a href="#summer-bloom" class="hover:text-white transition">Campaign</a>
+        <a href="#summer-event" class="hover:text-white transition">Summer Event</a>
         <a href="#stays" class="hover:text-white transition">Stays</a>
       </nav>
       <a href="#book" class="group inline-flex items-center gap-2 bg-white text-ink text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-terra hover:text-white transition-all">
@@ -256,25 +264,25 @@
     </div>
   </section>
 
-  <!-- SUMMER BLOOM CAMPAIGN -->
-  <section id="summer-bloom" class="summer-bloom bg-sand py-24 md:py-32">
+  <!-- SUMMER EVENT CAMPAIGN -->
+  <section id="summer-event" class="summer-event bg-sand py-24 md:py-32">
     <div class="max-w-[1400px] mx-auto px-6 md:px-10">
       <div class="campaign-layout">
         <div class="campaign-copy reveal">
-          <p class="text-xs uppercase tracking-[0.3em] text-ink/60 mb-4">04 — Campaign</p>
+          <p class="text-xs uppercase tracking-[0.3em] text-ink/60 mb-4">04 — Summer Event</p>
           <h2 class="font-display text-5xl md:text-7xl leading-[0.98] font-light">
-            Summer Bloom.
+            Summer Event.
           </h2>
           <p class="text-ink/70 text-lg mt-7 leading-relaxed">
-            A limited-edition seasonal collection built around slower mornings, film-camera walks, and keepsakes guests can take home from the mountains.
+            A limited-season retreat built around slower mornings, film-camera walks, and keepsakes guests can take home from the mountains.
           </p>
           <div class="campaign-actions mt-10">
             <a href="#book" class="inline-flex items-center justify-center gap-2 bg-terra text-white px-7 py-4 rounded-full font-semibold hover:bg-ink transition-all">
-              Reserve Summer Bloom
+              Reserve Summer Event
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
-            <a href="assets/summer-bloom.png" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-7 py-4 rounded-full border border-ink/20 text-ink font-semibold hover:border-ink transition-all">
-              View artwork
+            <a href="#stays" class="inline-flex items-center justify-center px-7 py-4 rounded-full border border-ink/20 text-ink font-semibold hover:border-ink transition-all">
+              View packages
             </a>
           </div>
           <div class="campaign-details">
@@ -288,15 +296,19 @@
             </div>
             <div>
               <span>Availability</span>
-              <strong>Limited edition</strong>
+              <strong>Limited spots</strong>
             </div>
           </div>
         </div>
 
-        <figure class="campaign-art reveal">
-          <a href="assets/summer-bloom.png" target="_blank" rel="noopener" aria-label="Open the Summer Bloom campaign artwork">
-            <img src="assets/summer-bloom.png" alt="Summer Bloom Recalibrate Collection 2026 campaign artwork" loading="lazy" />
+        <figure id="summer-event-artwork" class="campaign-art reveal">
+          <a href="assets/summer-event.png" target="_blank" rel="noopener" aria-label="Open the Summer Event campaign artwork">
+            <img src="assets/summer-event.png" alt="Summer Event Recalibrate Collection 2026 campaign artwork" loading="lazy" onerror="this.closest('.campaign-art').classList.add('is-missing'); this.remove();" />
           </a>
+          <div class="campaign-art-fallback">
+            <span>Summer Event</span>
+            <strong>Limited spots available</strong>
+          </div>
         </figure>
       </div>
     </div>
