@@ -138,137 +138,296 @@ body { font-feature-settings: 'ss01', 'ss02'; }
   border-top: 1px solid rgba(11,22,32,0.08);
   border-bottom: 1px solid rgba(11,22,32,0.08);
 }
-.campaign-layout {
-  display: grid;
-  gap: 46px;
-}
-.campaign-copy {
-  display: grid;
-  gap: 28px 52px;
-  max-width: none;
-}
-.campaign-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-.campaign-details {
-  display: grid;
-  gap: 18px 30px;
-  padding-top: 4px;
-}
-.campaign-copy > p,
-.campaign-actions,
-.campaign-details {
-  max-width: 620px;
-}
-@media (min-width: 1024px) {
-  .campaign-copy {
-    grid-template-columns: minmax(0, 0.9fr) minmax(360px, 0.75fr);
-    align-items: end;
-  }
-  .campaign-copy > p:first-child,
-  .campaign-copy > h2 {
-    grid-column: 1;
-  }
-  .campaign-copy > p:not(:first-child),
-  .campaign-actions,
-  .campaign-details {
-    grid-column: 2;
-  }
-  .campaign-copy > p:not(:first-child) {
-    grid-row: 1 / span 2;
-    align-self: center;
-  }
-  .campaign-actions {
-    align-self: start;
-  }
-  .campaign-details {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    max-width: none;
-  }
-}
-@media (max-width: 1023px) {
-  .campaign-details {
-    margin-top: 12px;
-    padding-top: 28px;
-    border-top: 1px solid rgba(11,22,32,0.16);
-  }
-}
-@media (min-width: 1024px) {
-  .campaign-details {
-    margin-top: 8px;
-    padding-top: 28px;
-    border-top: 1px solid rgba(11,22,32,0.16);
-  }
-}
-.campaign-details span {
-  display: block;
-  color: rgba(11,22,32,0.52);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-}
-.campaign-details strong {
-  display: block;
-  color: #0B1620;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.55rem;
-  font-weight: 500;
-  line-height: 1.12;
-  margin-top: 6px;
-}
-.campaign-art {
-  margin: 0;
+.summer-poster {
+  background: #E8DFCF;
+  overflow: hidden;
+  padding: clamp(28px, 5vw, 76px);
   position: relative;
 }
-.campaign-art a {
-  display: block;
-  box-shadow: 0 30px 80px -38px rgba(11,22,32,0.55);
-  transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), box-shadow 0.5s cubic-bezier(0.16,1,0.3,1);
-}
-.campaign-art a:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 36px 90px -36px rgba(11,22,32,0.68);
-}
-.campaign-art img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.campaign-art-fallback {
-  display: none;
-}
-.campaign-art.is-missing a {
-  display: none;
-}
-.campaign-art.is-missing .campaign-art-fallback {
+.summer-poster-head {
   align-items: center;
-  aspect-ratio: 23 / 16;
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  margin-bottom: clamp(28px, 5vw, 64px);
+}
+.summer-limited-link {
+  border: 1px solid rgba(11,22,32,0.18);
+  color: #0B1620;
+  display: inline-flex;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  padding: 12px 18px;
+  text-transform: uppercase;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+.summer-limited-link:hover {
   background: #0B1620;
+  border-color: #0B1620;
+  color: white;
+}
+.summer-hero {
+  display: grid;
+  gap: clamp(32px, 5vw, 72px);
+}
+.summer-brand {
+  align-items: center;
+  color: #0B1620;
+  display: grid;
+  justify-items: center;
+  margin-bottom: 22px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.summer-brand svg {
+  height: 58px;
+  width: 58px;
+}
+.summer-brand span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.1rem;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  margin-top: 8px;
+}
+.summer-brand small {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.48em;
+  margin-top: 6px;
+}
+.summer-title {
+  color: #B8825A;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 5.2rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 0.78;
+  text-align: center;
+  text-shadow: 0 3px 0 rgba(11,22,32,0.08);
+  text-transform: uppercase;
+}
+.summer-collection {
+  align-items: center;
+  color: #0B1620;
+  display: flex;
+  font-size: 0.9rem;
+  font-weight: 700;
+  gap: 18px;
+  justify-content: center;
+  letter-spacing: 0.38em;
+  margin-top: 32px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.summer-collection::before,
+.summer-collection::after {
+  background: rgba(11,22,32,0.32);
+  content: "";
+  height: 1px;
+  max-width: 180px;
+  width: 12vw;
+}
+.summer-reserve {
+  align-items: center;
+  background: #B8825A;
   color: white;
   display: flex;
-  flex-direction: column;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  gap: 14px;
   justify-content: center;
-  min-height: 320px;
-  padding: 40px;
-  text-align: center;
+  letter-spacing: 0.06em;
+  margin: 36px auto 0;
+  max-width: 360px;
+  padding: 14px 28px;
+  text-transform: uppercase;
+  transition: background 0.3s, transform 0.3s;
 }
-.campaign-art-fallback span {
+.summer-reserve:hover {
+  background: #0B1620;
+  transform: translateY(-3px);
+}
+.summer-edition {
+  align-items: center;
+  color: #0B1620;
+  display: flex;
+  font-size: 0.88rem;
+  font-weight: 800;
+  gap: 16px;
+  justify-content: center;
+  letter-spacing: 0.38em;
+  margin-top: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.summer-edition::before,
+.summer-edition::after {
+  background: rgba(11,22,32,0.26);
+  content: "";
+  height: 1px;
+  width: 70px;
+}
+.summer-kit {
+  display: grid;
+  gap: 18px;
+}
+.summer-kit-item {
+  background: rgba(255,255,255,0.42);
+  border: 1px solid rgba(11,22,32,0.12);
+  color: #0B1620;
+  cursor: pointer;
+  display: block;
+  min-height: 170px;
+  padding: 24px;
+  text-align: left;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s, border-color 0.3s;
+}
+.summer-kit-item:hover,
+.summer-kit-item:focus-visible {
+  background: white;
+  border-color: rgba(184,130,90,0.55);
+  outline: none;
+  transform: translateY(-4px);
+}
+.summer-kit-item span {
   color: #B8825A;
-  font-size: 0.78rem;
-  font-weight: 700;
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 800;
   letter-spacing: 0.28em;
   text-transform: uppercase;
 }
-.campaign-art-fallback strong {
+.summer-kit-item strong {
   display: block;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 5vw, 4.6rem);
+  font-size: 1.8rem;
   font-weight: 500;
-  line-height: 0.95;
-  margin-top: 18px;
+  line-height: 1;
+  margin-top: 60px;
+}
+.summer-camera {
+  align-items: center;
+  border-bottom: 1px solid rgba(11,22,32,0.18);
+  border-top: 1px solid rgba(11,22,32,0.18);
+  color: #0B1620;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin: clamp(34px, 5vw, 66px) 0;
+  padding: 20px;
+  text-align: center;
+  transition: color 0.3s;
+}
+.summer-camera:hover {
+  color: #B8825A;
+}
+.summer-camera svg {
+  flex: 0 0 auto;
+  height: 28px;
+  width: 28px;
+}
+.summer-camera strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 500;
+}
+.summer-journal {
+  display: grid;
+  gap: 18px;
+}
+.journal-stop {
+  background: rgba(255,255,255,0.52);
+  border: 1px solid rgba(11,22,32,0.1);
+  padding: 14px;
+}
+.journal-stop summary {
+  cursor: pointer;
+  display: grid;
+  gap: 12px;
+  list-style: none;
+}
+.journal-stop summary::-webkit-details-marker {
+  display: none;
+}
+.journal-stop summary span {
+  color: #0B1620;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.journal-stop img {
+  aspect-ratio: 4 / 3;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+.journal-stop p {
+  color: rgba(11,22,32,0.72);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-top: 12px;
+}
+@media (min-width: 900px) {
+  .summer-brand span {
+    font-size: 3.2rem;
+  }
+  .summer-title {
+    font-size: 10rem;
+  }
+  .summer-collection {
+    font-size: 1.2rem;
+  }
+  .summer-reserve {
+    font-size: 2rem;
+  }
+  .summer-kit-item strong {
+    font-size: 2.4rem;
+  }
+  .summer-camera strong {
+    font-size: 2rem;
+  }
+  .summer-hero {
+    grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+    align-items: center;
+  }
+  .summer-journal {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1300px) {
+  .summer-brand span {
+    font-size: 3.8rem;
+  }
+  .summer-title {
+    font-size: 14rem;
+  }
+  .summer-collection {
+    font-size: 1.5rem;
+  }
+  .summer-reserve {
+    font-size: 2.25rem;
+  }
+  .summer-kit-item strong {
+    font-size: 2.8rem;
+  }
+  .summer-camera strong {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 700px) {
+  .summer-poster-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .summer-camera {
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 
 /* === Stay cards === */
