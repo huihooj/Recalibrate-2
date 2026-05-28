@@ -141,6 +141,8 @@ body { font-feature-settings: 'ss01', 'ss02'; }
 .summer-campaign {
   display: grid;
   gap: 28px;
+  margin: 0 auto;
+  max-width: 1040px;
 }
 .summer-campaign-header {
   align-items: center;
@@ -170,6 +172,7 @@ body { font-feature-settings: 'ss01', 'ss02'; }
   margin: 0;
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 .summer-artwork img {
   display: block;
@@ -221,54 +224,6 @@ body { font-feature-settings: 'ss01', 'ss02'; }
   left: 37%;
   top: 88%;
   width: 23%;
-}
-.summer-hotspot-camera {
-  height: 6%;
-  left: 18%;
-  top: 45%;
-  width: 35%;
-}
-.summer-hotspot-echo {
-  height: 16%;
-  left: 11%;
-  top: 54%;
-  width: 17%;
-}
-.summer-hotspot-katoomba {
-  height: 17%;
-  left: 27%;
-  top: 58%;
-  width: 13%;
-}
-.summer-hotspot-wentworth {
-  height: 12%;
-  left: 39%;
-  top: 52%;
-  width: 17%;
-}
-.summer-hotspot-leura {
-  height: 14%;
-  left: 46%;
-  top: 66%;
-  width: 17%;
-}
-.summer-hotspot-tote {
-  height: 31%;
-  left: 63%;
-  top: 11%;
-  width: 30%;
-}
-.summer-hotspot-journal {
-  height: 27%;
-  left: 66%;
-  top: 43%;
-  width: 23%;
-}
-.summer-hotspot-bottle {
-  height: 32%;
-  left: 86%;
-  top: 39%;
-  width: 12%;
 }
 @media (max-width: 700px) {
   .summer-campaign-header {
